@@ -1,0 +1,234 @@
+:root {
+    --font-400: "Oswald", sans-serif;
+    --font-700: "Oswald", sans-serif;
+    --text-400: "Roboto Condensed", sans-serif;
+    --line-height: 5rem;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: black;
+  }
+
+  /* ::-webkit-scrollbar {
+    background-color: black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to top, black, cyan, black);
+  } */
+
+  .nav {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .nav a {
+    color: cyan;
+    font-size: 3rem;
+    -webkit-text-stroke: 1.3px;
+    -webkit-text-stroke-color: black;
+    text-decoration: none;
+    transition-property: -webkit-text-stroke color;
+    transition-duration: 0.3s;
+  }
+
+  .nav a:hover {
+    -webkit-text-stroke: 3px;
+    -webkit-text-stroke-color: black;
+    color: white;
+  }
+
+  a:visited {
+    color: cyan;
+  }
+
+  h1,
+  h2 {
+    font-family: var(--font-400);
+    font-weight: 400;
+    line-height: var(--line-height);
+  }
+
+  p {
+    font-family: var(--text-400);
+    font-weight: 400;
+    font-size: 3rem;
+    color: white;
+  }
+
+  #orange {
+    color: hsl(18, 58%, 46%);
+  }
+
+  #blue {
+    color: hsl(200, 66%, 53%);
+  }
+
+  #yellow {
+    color: hsl(51, 82%, 57%);
+  }
+
+  button {
+    width: 13rem;
+    height: 5rem;
+    margin-top: 6rem;
+    border-radius: 15px;
+    font-size: 2rem;
+    background-color: cyan;
+    transition-property: transform box-shadow;
+    transition-duration: 0.3s;
+  }
+
+  button:hover {
+    transform: perspective(1000px) rotateY(30deg);
+    border: solid 0.3rem hsl(180, 100%, 50%);
+    box-shadow: -20px 20px hsl(180, 100%, 40%);
+  }
+
+  button:active {
+    box-shadow: -10px 10px hsl(180, 100%, 40%);
+  }
+
+  button a {
+    color: cyan;
+    letter-spacing: 0.15rem;
+    text-decoration: none;
+    -webkit-text-stroke: 0.14rem;
+    -webkit-text-stroke-color: black;
+  }
+
+  .graphic {
+    background-image: url(/assets/AVIF/code-screen.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+  }
+
+  .black {
+    background-color: black;
+  }
+
+  .cyan {
+    background-color: cyan;
+  }
+
+  .P_notice {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: block;
+  }
+
+  .P_notice a:visited {
+    color: cyan;
+  }
+
+  .hidden {
+    opacity: 0;
+    transition-property: all;
+    transform: translateX(100%);
+    transition-duration: 1s;
+  }
+
+  .hidden:nth-child(3),
+  .hidden:nth-child(8) {
+    transform: translateX(-100%);
+  }
+
+  .hidden:nth-child(2),
+  .hidden:nth-child(6) {
+    transform: translateY(-100%);
+  }
+
+  .hidden:nth-child(4) {
+    transform: translateY(100%);
+  }
+
+  .show {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .show:nth-child(3),
+  .show:nth-child(8) {
+    transform: translateX(0);
+  }
+
+  .show:nth-child(2),
+  .show:nth-child(4),
+  .show:nth-child(6) {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 750px) {
+    .nav a {
+      -webkit-text-stroke-color: black;
+    }
+
+    .main_content {
+      width: 100vw;
+    }
+
+    .main_content h1,
+    h2 {
+      font-size: 3rem;
+      letter-spacing: 0.15rem;
+      -webkit-text-stroke: 2px;
+      -webkit-text-stroke-color: cyan;
+    }
+
+    #name {
+      font-family: var(--font-700);
+      font-weight: 700;
+      font-size: 5rem;
+      color: cyan;
+    }
+
+    p {
+      font-family: var(--text-400);
+      font-weight: 400;
+      font-size: 1rem;
+      color: white;
+    }
+  }
+
+  @media (max-width: 656px) {
+    .nav a {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 414px) {
+    .nav a {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 343px) {
+    .nav a {
+      font-size: 1.3rem;
+    }
+  }
+
+  #preloader {
+    background: #000;
+    height: 100dvh;
+    height: 100vh;
+    width: 100%;
+    z-index: 99999;
+  }

@@ -1,0 +1,180 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100dvh;
+    height: 100vh;
+    width: 100dvw;
+    width: 100vw;
+  }
+
+  .first_column {
+    padding: 5%;
+  }
+
+  .tilt {
+    padding-top: 5rem;
+    margin-bottom: 3rem;
+    animation: perspective 2s forwards;
+  }
+
+  @keyframes perspective {
+    from {
+      transform: perspective(-1000px) rotateY(0deg);
+    }
+
+    to {
+      transform: perspective(1000px) rotateY(20deg);
+    }
+  }
+
+  .intro {
+    padding-top: 5%;
+    padding-right: 30%;
+    animation: 1s slidein alternate;
+  }
+
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+
+    to {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  .main_content:hover {
+    cursor: default;
+  }
+
+  .main_content h1,
+  h2,
+  p,
+  span {
+    margin-left: 3%;
+  }
+
+  .main_content h1,
+  h2 {
+    font-size: 5rem;
+    letter-spacing: 0.15rem;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: cyan;
+  }
+
+  #name {
+    font-family: var(--font-700);
+    font-weight: 700;
+    font-size: 8rem;
+    color: cyan;
+  }
+
+  .graphic {
+    background-image: url(/assets/JPEG/coding-screen.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+  }
+
+  @media (max-width: 840px) {
+    .main_content h1,
+    h2 {
+      font-size: 4rem;
+    }
+
+    #name {
+      font-size: 6rem;
+    }
+
+    .intro {
+      padding: 0;
+    }
+
+    p {
+      font-size: 2.3rem;
+    }
+  }
+
+  @media (max-width: 750px) {
+    .graphic {
+      background-attachment: initial;
+      position: absolute;
+      height: 20rem;
+    }
+
+    .main_content {
+      margin-top: 15rem;
+    }
+
+    .main_content h1,
+    h2 {
+      letter-spacing: 0.15rem;
+      -webkit-text-stroke: 2px;
+      -webkit-text-stroke-color: cyan;
+    }
+
+    .tilt {
+      animation-duration: 3s;
+    }
+
+    @keyframes perspective {
+      from {
+        transform: perspective(-1000px) rotateY(0deg);
+      }
+
+      to {
+        transform: perspective(1000px) rotateY(20deg);
+      }
+    }
+
+    button {
+      transform: perspective(1000px) rotateY(30deg);
+      border: solid 0.3rem hsl(180, 100%, 50%);
+      box-shadow: -20px 20px hsl(180, 100%, 40%);
+      margin-bottom: 2rem;
+      margin-left: 1rem;
+    }
+
+    .intro {
+      padding: 0;
+    }
+
+    .intro p {
+      margin-top: 3rem;
+      font-size: 2rem;
+    }
+
+    .nav a {
+      -webkit-text-stroke: 0.08rem;
+      -webkit-text-stroke-color: black;
+    }
+
+    .main_content h1 {
+      font-size: 4rem;
+    }
+
+    .main_content h2 {
+      font-size: 3rem;
+    }
+
+    #name {
+      font-size: 4.5rem;
+    }
+
+    .intro p {
+      font-size: 1.3rem;
+    }
+
+    button {
+      font-size: 1.4rem;
+    }
+
+    button a {
+      -webkit-text-stroke: 0.08rem;
+      -webkit-text-stroke-color: black;
+    }
+  }
